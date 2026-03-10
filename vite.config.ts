@@ -7,10 +7,10 @@ import tailwindcss from '@tailwindcss/vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import svgLoader from 'vite-svg-loader'
 
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools(), tailwindcss(), tsconfigPaths(), svgLoader()],
+  base: process.env.NODE_ENV === 'production' ? '/prototype/' : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

@@ -12,6 +12,7 @@ import { Separator } from '@/components/ui/separator'
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { RouteName } from '@/router/types'
 import ModeToggle from '../ModeToggle.vue'
+import SidebarMobileCloser from './SidebarMobileCloser.vue'
 
 withDefaults(
   defineProps<{
@@ -25,6 +26,7 @@ withDefaults(
 </script>
 <template>
   <SidebarProvider>
+    <SidebarMobileCloser />
     <AppSidebar v-if="showNavigation" />
     <SidebarInset>
       <header

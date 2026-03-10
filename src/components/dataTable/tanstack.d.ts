@@ -1,0 +1,10 @@
+import '@tanstack/vue-table'
+
+declare module '@tanstack/vue-table' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface ColumnMeta<TData, TValue> {
+    enableColumnDragging?: boolean
+    headerMenuItems?: { label: string; onClick: () => void }[]
+    isCustomHeader?: boolean
+  }
+}

@@ -5,7 +5,7 @@ import { AppError } from '@/utils/AppError'
 import router from '@/router'
 import { RouteName } from '@/router/types'
 
-const isDev = import.meta.env.DEV
+const isDev = import.meta.env.DEV || import.meta.env.MODE === 'preview'
 
 const baseURL = import.meta.env.VITE_API_URL || ''
 
